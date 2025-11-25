@@ -131,3 +131,45 @@ footer {
     text-align: center;
     padding-bottom: 15px;
 }
+
+/*
+-----------------------------------------------------------------
+*/
+
+.modal {
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    width: 300px;
+    height: 415px;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    justify-content: space-around;
+    z-index: 1000;
+    display:none;
+}
+
+#ppAvatar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.modal button {
+    width: 151px;
+    background-color: #2A9D8F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+}
+
+.backgroundModal {
+    background: rgba(0, 0, 0, 0.525);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}

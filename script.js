@@ -180,5 +180,26 @@ compteur = compteur + 1
 
 })
 
+// ------------------------------------------------------------------------------------
 
+// Appeler la modal
+let callOverlay = document.getElementById("callOverlay")
+let modal = document.querySelector(".modal")
 
+wrapperParticipants.addEventListener("click", (e) => {
+    const changeAvatar = e.target.matches(".imgAvatar")
+    if (!changeAvatar) {
+        return
+    } else {
+        callOverlay.classList.add("backgroundModal")
+        modal.style.display="flex"
+    }
+})
+
+// Fermer la modal
+callOverlay.addEventListener("click", () => {
+    callOverlay.classList.remove("backgroundModal")
+    modal.style.display="none"
+})
+
+// ------------------------------------------------------------------------------------
