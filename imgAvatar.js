@@ -1,0 +1,22 @@
+let arrayImgAvatar = [
+    "/Avatars/avatar1.svg",
+    "/Avatars/avatar2.svg",
+    "/Avatars/avatar3.svg",
+    "/Avatars/avatar4.svg",
+    "/Avatars/avatar5.svg",
+    "/Avatars/avatar6.svg",
+    "/Avatars/avatar7.svg",
+    "/Avatars/avatar8.svg",
+    "/Avatars/avatar9.svg",
+    "/Avatars/avatar10.svg",
+    "/Avatars/avatar11.svg",
+    "/Avatars/avatar12.svg",
+    "/Avatars/avatar13.svg",
+    "/Avatars/avatar14.svg",
+    "/Avatars/avatar15.svg",
+    "/Avatars/avatar16.svg",
+    "/Avatars/avatar17.svg",
+    "/Avatars/avatar18.svg",
+    "/Avatars/avatar19.svg",
+    "/Avatars/avatar20.svg"
+]
