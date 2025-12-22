@@ -53,8 +53,10 @@ boutonAjouter.addEventListener("click", () => {
 // Création de l'image pour l'avatar
     let imgAvatar = document.createElement("img")
     // appelle une image aléatoire
-    imgAvatar.src = arrayImgAvatar[Math.floor(Math.random()*arrayImgAvatar.length)]
-    imgAvatar.alt=`Avatar de la personne ${compteur}`
+    let random = arrayImgAvatar[Math.floor(Math.random()*arrayImgAvatar.length)]
+    imgAvatar.src = random
+    let avatarName = random.split("/").pop().replace(".svg", "")
+    imgAvatar.dataset.avatar = avatarName
     imgAvatar.classList.add("imgAvatar")
     wrapperPrincipal.appendChild(imgAvatar)
 
@@ -175,7 +177,6 @@ boutonAjouter.addEventListener("click", () => {
         imgTransportCommunSelected.classList.add("Selected")
         labelTransportCommun.appendChild(imgTransportCommunSelected)
 
-
 compteur = compteur + 1
 
 })
@@ -185,21 +186,74 @@ compteur = compteur + 1
 // Appeler la modal
 let callOverlay = document.getElementById("callOverlay")
 let modal = document.querySelector(".modal")
-
+let ppAvatar = document.querySelectorAll("#ppAvatar img")
+// Apparition de la modal
 wrapperParticipants.addEventListener("click", (e) => {
     const changeAvatar = e.target.matches(".imgAvatar")
+    const cibleImgAvatar = e.target.dataset.avatar
+    
+    let wrapperAvatar = modal.querySelectorAll(".imgAvatar")
+
     if (!changeAvatar) {
         return
     } else {
         callOverlay.classList.add("backgroundModal")
         modal.style.display="flex"
+        wrapperAvatar.forEach(selected => {
+            if (cibleImgAvatar===selected.dataset.avatar) {
+                selected.classList.add("selectedAvatar")
+            } else {
+                return
+            }
+    })
     }
+})
+
+modal.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("imgAvatar")) return
+
+    const wrapperAvatar = modal.querySelectorAll(".imgAvatar")
+
+    wrapperAvatar.forEach(img => img.classList.remove("selectedAvatar"))
+
+    e.target.classList.add("selectedAvatar")
+})
+
+let btnChangeAvatar = document.querySelector(".btnChangeAvatar")
+btnChangeAvatar.addEventListener("click", ()=>{
+    callOverlay.classList.remove("backgroundModal")
+    modal.style.display="none"
 })
 
 // Fermer la modal
 callOverlay.addEventListener("click", () => {
     callOverlay.classList.remove("backgroundModal")
     modal.style.display="none"
+    let selectedAvatar = document.querySelector(".selectedAvatar")
+    if (!selectedAvatar.classList("selectedAvatar")) {
+        return
+    } else {
+    selectedAvatar.classList.remove("selectedAvatar")
+    }
 })
 
 // ------------------------------------------------------------------------------------
+
+// Ouvrir la page des paramètres
+
+let openSetting = document.getElementById("openSetting");
+openSetting.addEventListener("click", () => {
+  document.querySelector('.page').classList.add('active');
+});
+
+// ------------------------------------------------------------------------------------
+
+// Activer la recherche
+
+let viewport2 = document.getElementById("viewport2");
+let boutonSearch = document.querySelector(".boutonSearch");
+
+boutonSearch.addEventListener("click", () => {
+    viewport2.style.display="flex";
+    viewport2.style.flexDirection="column";
+})

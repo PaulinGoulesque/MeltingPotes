@@ -1,0 +1,105 @@
+:root {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 50px;
+}
+
+header p {
+    color: #7e7e7e;
+}
+
+img {
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.wrapperSetting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.wrapperSetting p {
+    background-color: #BFE2DD;
+    width: 100%;
+    height: 32px;
+    border-radius: 20px;
+    line-height: 32px;
+    padding: 0px 15px;
+    margin: 0px;
+}
+
+.wrapperSetting button {
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+}
+
+.wrapperSetting img {
+    vertical-align: middle;
+}
+
+footer {
+    margin-bottom: 50px;
+    width: 90%;
+}
+
+/*
+-----------------------------------------------------------------
+*/
+
+/* Ouverture de page Setting */
+
+.page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: translateX(-100%);
+  transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.page.active {
+  transform: translateX(0);
+}
