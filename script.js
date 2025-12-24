@@ -73,6 +73,7 @@ boutonAjouter.addEventListener("click", () => {
 // Ajout des inputs 
     let adresse = document.createElement("input")
     adresse.type="text"
+    adresse.placeholder="Entres ton adresse"
     adresse.classList.add("adresse")
     entrerAdresse.appendChild(adresse)
     let resetBtn = document.createElement("input")
@@ -254,6 +255,30 @@ let viewport2 = document.getElementById("viewport2");
 let boutonSearch = document.querySelector(".boutonSearch");
 
 boutonSearch.addEventListener("click", () => {
-    viewport2.style.display="flex";
-    viewport2.style.flexDirection="column";
+  viewport2.style.display = "flex";
+  viewport2.style.flexDirection = "column";
+});
+
+// ------------------------------------------------------------------------------------
+// Ouvrir la page des favoris
+
+const openFavorite = document.getElementById("openFavorite")
+const closeFavorite = document.getElementById("closeFavorite")
+let pageFavori = document.querySelector(".pageFavori")
+
+openFavorite.addEventListener("click", () => {
+    pageFavori.classList.add("active")
+})
+
+closeFavorite.addEventListener("click", () => {
+    pageFavori.classList.remove("active")
+})
+
+// ------------------------------------------------------------------------------------
+// Changement du bouton edit disabled si pas de favoris ---- À MODIFIER PLUS TARD POUR LE BON FONCTIONNEMENT
+
+const editFavs = document.getElementById("editFavs")
+
+editFavs.addEventListener("click", () => {
+    editFavs.style.opacity = "100%"
 })

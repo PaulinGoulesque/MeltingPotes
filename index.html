@@ -6,50 +6,77 @@
     <link rel="stylesheet" href="style.css">
     <script src="/imgAvatar.js" defer></script>
     <script src="/script.js" defer></script>
+    <script src="/newFavori.js" defer></script>
     <title>Melting Potes</title>
 </head>
 <body>
     <div id="viewport1">
         <div id="callOverlay"></div>
+        <div class="pageFavori">
+            <div class="wrapperBtnFavoris">
+                <div class="btnPageFavori">
+                    <img src="/Images/Retour.svg" alt="Retour à l'écran principal" id="closeFavorite">
+                    <img src="/Images/edit.svg" alt="Modifier les favoris que l'on veut supprimer" id="editFavs">
+                </div>
+                <div class="FavoritesUsers">
+                    <p>Aucun favori</p>
+                </div>
+            </div>
+            <button class="addNewFavoriteUser">AJOUTER</button>
+            <div class="addNewFavori">
+                <img src="/Images/Retour.svg" alt="Retour à l'écran principal" id="closeAddFavorite">
+                <div class="wrapperTotal">
+                    <div class="wrapperAvatarID">
+                        <img src="/Images/NoneAvatar.svg" alt="Avatar à choisir" id="NoneAvatar">
+                        <div class="inputNewFavorite">
+                            <input type="text" name="name" id="AddNameFavorite" placeholder="Nom">
+                            <input type="text" name="nickname" id="AddNicknameFavorite" placeholder="Prénom">
+                        </div>
+                        <textarea placeholder="Adresse" rows="4" id="AddAdressFavorite"></textarea>
+                    </div>
+                    <button class="saveNewFavorite"><img src="/Images/saveNewFav.svg" alt="Enregistrer un nouveau favori"></button>
+                </div>
+            </div>
+        </div>
         <div id="containerHauteur1">
             <header>
                 <a href="/setting.html"><img src="/Images/Parametre.svg" alt="Gérer les paramètres" id="openSetting"></a>
                 <img src="/Images/logo.svg" alt="Logo Melting Potes">
-                <img src="/Images/favoris.svg" alt="Permet d'ajouter aux favoris">
+                <img src="/Images/favoris.svg" alt="Permet d'ajouter aux favoris" id="openFavorite">
             </header>
             <section>
             <div class="modal">
-                    <div id="ppAvatar">
-                        <img src="/Avatars/avatar1.svg" data-avatar="Avatar de la personne 1" class="imgAvatar">
-                        <img src="/Avatars/avatar2.svg" data-avatar="Avatar de la personne 2" class="imgAvatar">
-                        <img src="/Avatars/avatar3.svg" data-avatar="Avatar de la personne 3" class="imgAvatar">
-                        <img src="/Avatars/avatar4.svg" data-avatar="Avatar de la personne 4" class="imgAvatar">
-                        <img src="/Avatars/avatar5.svg" data-avatar="Avatar de la personne 5" class="imgAvatar">
-                        <img src="/Avatars/avatar6.svg" data-avatar="Avatar de la personne 6" class="imgAvatar">
-                        <img src="/Avatars/avatar7.svg" data-avatar="Avatar de la personne 7" class="imgAvatar">
-                        <img src="/Avatars/avatar8.svg" data-avatar="Avatar de la personne 8" class="imgAvatar">
-                        <img src="/Avatars/avatar9.svg" data-avatar="Avatar de la personne 9" class="imgAvatar">
-                        <img src="/Avatars/avatar10.svg" data-avatar="Avatar de la personne 10" class="imgAvatar">
-                        <img src="/Avatars/avatar11.svg" data-avatar="Avatar de la personne 11" class="imgAvatar">
-                        <img src="/Avatars/avatar12.svg" data-avatar="Avatar de la personne 12" class="imgAvatar">
-                        <img src="/Avatars/avatar13.svg" data-avatar="Avatar de la personne 13" class="imgAvatar">
-                        <img src="/Avatars/avatar14.svg" data-avatar="Avatar de la personne 14" class="imgAvatar">
-                        <img src="/Avatars/avatar15.svg" data-avatar="Avatar de la personne 15" class="imgAvatar">
-                        <img src="/Avatars/avatar16.svg" data-avatar="Avatar de la personne 16" class="imgAvatar">
-                        <img src="/Avatars/avatar17.svg" data-avatar="Avatar de la personne 17" class="imgAvatar">
-                        <img src="/Avatars/avatar18.svg" data-avatar="Avatar de la personne 18" class="imgAvatar">
-                        <img src="/Avatars/avatar19.svg" data-avatar="Avatar de la personne 19" class="imgAvatar">
-                        <img src="/Avatars/avatar20.svg" data-avatar="Avatar de la personne 20" class="imgAvatar">
-                    </div>
-                    <button class="btnChangeAvatar">Valider</button>
+                <div id="ppAvatar">
+                    <img src="/Avatars/avatar1.svg" data-avatar="Avatar de la personne 1" class="imgAvatar">
+                    <img src="/Avatars/avatar2.svg" data-avatar="Avatar de la personne 2" class="imgAvatar">
+                    <img src="/Avatars/avatar3.svg" data-avatar="Avatar de la personne 3" class="imgAvatar">
+                    <img src="/Avatars/avatar4.svg" data-avatar="Avatar de la personne 4" class="imgAvatar">
+                    <img src="/Avatars/avatar5.svg" data-avatar="Avatar de la personne 5" class="imgAvatar">
+                    <img src="/Avatars/avatar6.svg" data-avatar="Avatar de la personne 6" class="imgAvatar">
+                    <img src="/Avatars/avatar7.svg" data-avatar="Avatar de la personne 7" class="imgAvatar">
+                    <img src="/Avatars/avatar8.svg" data-avatar="Avatar de la personne 8" class="imgAvatar">
+                    <img src="/Avatars/avatar9.svg" data-avatar="Avatar de la personne 9" class="imgAvatar">
+                    <img src="/Avatars/avatar10.svg" data-avatar="Avatar de la personne 10" class="imgAvatar">
+                    <img src="/Avatars/avatar11.svg" data-avatar="Avatar de la personne 11" class="imgAvatar">
+                    <img src="/Avatars/avatar12.svg" data-avatar="Avatar de la personne 12" class="imgAvatar">
+                    <img src="/Avatars/avatar13.svg" data-avatar="Avatar de la personne 13" class="imgAvatar">
+                    <img src="/Avatars/avatar14.svg" data-avatar="Avatar de la personne 14" class="imgAvatar">
+                    <img src="/Avatars/avatar15.svg" data-avatar="Avatar de la personne 15" class="imgAvatar">
+                    <img src="/Avatars/avatar16.svg" data-avatar="Avatar de la personne 16" class="imgAvatar">
+                    <img src="/Avatars/avatar17.svg" data-avatar="Avatar de la personne 17" class="imgAvatar">
+                    <img src="/Avatars/avatar18.svg" data-avatar="Avatar de la personne 18" class="imgAvatar">
+                    <img src="/Avatars/avatar19.svg" data-avatar="Avatar de la personne 19" class="imgAvatar">
+                    <img src="/Avatars/avatar20.svg" data-avatar="Avatar de la personne 20" class="imgAvatar">
                 </div>
+                <button class="btnChangeAvatar">Valider</button>
+            </div>
                 <div class="wrapperGlobal">
                     <div class="wrapperParticipants">
                         <div class="wrapperPrincipal">
                             <img src="/Avatars/avatar1.svg" data-avatar="avatar1" class="imgAvatar">
                             <div class="wrapperSecondary">
                                 <div class="entrerAdresse">
-                                    <input type="text" class="adresse">
+                                    <input type="text" class="adresse" placeholder="Entres ton adresse">
                                     <input type="reset" class="reset" value=&#215;>
                                 </div>
                                 <div class="checkboxes">
@@ -80,7 +107,7 @@
                             <img src="/Avatars/avatar2.svg" data-avatar="avatar2" class="imgAvatar">
                             <div class="wrapperSecondary">
                                 <div class="entrerAdresse">
-                                    <input type="text" class="adresse">
+                                    <input type="text" class="adresse" placeholder="Entres ton adresse">
                                     <input type="reset" class="reset" value=&#215;>
                                 </div>
                                 <div class="checkboxes">
@@ -117,24 +144,18 @@
         </div>
     </div>
     <div id="viewport2">
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
-        <p> blablabla </p>
+    <div id="wrapperGoogleMaps">
+        
+    </div>
+        <div id="scrollSearch">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+            <img src="#" alt="#">
+        </div>
     </div>
 </body>
 </html>
