@@ -224,6 +224,10 @@ let btnChangeAvatar = document.querySelector(".btnChangeAvatar")
 btnChangeAvatar.addEventListener("click", ()=>{
     callOverlay.classList.remove("backgroundModal")
     modal.style.display="none"
+
+    let nouvelAvatar = modal.querySelector(".selectedAvatar")
+    let imgAvatar = document.querySelector(".imgAvatar")
+    imgAvatar.src = nouvelAvatar.src
 })
 
 // Fermer la modal

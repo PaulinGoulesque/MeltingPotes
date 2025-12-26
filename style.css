@@ -287,6 +287,7 @@ Ajouter un nouveau favori
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
     gap: 20px;
 }
 
@@ -322,12 +323,14 @@ Ajouter un nouveau favori
 .saveNewFavorite {
     border: none;
     background-color: transparent;
+    width: 66px;
 }
 
 .wrapperTotal {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 100%;
 }
 
